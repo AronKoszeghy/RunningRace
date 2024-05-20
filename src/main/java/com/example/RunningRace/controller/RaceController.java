@@ -3,7 +3,10 @@ package com.example.RunningRace.controller;
 import com.example.RunningRace.model.Race;
 import com.example.RunningRace.repository.RaceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/races")
@@ -27,13 +30,12 @@ public class RaceController {
         return raceRepository.save(race);
     }
 
-//    @PutMapping("/updateBasketName/{basketId}")
-//    public BasketEntity updateBasketName(@PathVariable Long basketId, @RequestBody String name) {
-//        BasketEntity basket = basketRepository.findById(basketId)
-//                .orElseThrow(() -> new RuntimeException("Basket not found with ID: " + basketId));
-//        basket.setBasketName(name);
-//        return basketRepository.save(basket);
+//    @GetMapping("/getRaceRunners/{id}")
+//    public List<Runner> getRaceRunners(@PathVariable int id) {
+//        Race race = raceRepository.findById(id).orElseThrow(() -> new RuntimeException("Race not found!"));
+//        return new ArrayList<>(race.getRaceRunners());
 //    }
+
 
 
 }

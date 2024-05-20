@@ -1,9 +1,8 @@
 package com.example.RunningRace.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.Set;
 
 @Entity
 public class Race {
@@ -14,6 +13,8 @@ public class Race {
     private String name;
     private int distanceInKM;
 
+    @OneToMany(mappedBy = "race")
+    Set<Result> results;
 
     public int getId() {
         return id;
