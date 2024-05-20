@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Comparator;
 import java.util.stream.Collectors;
@@ -44,6 +46,15 @@ public class RaceWebController {
                 .sorted(Comparator.comparingInt(Result::getTimeInMin))
                 .collect(Collectors.toList()));
         return "raceDetails";
+    }
+
+    @PostMapping("/createRace")
+    public String createRace(@RequestParam("name") String name, @RequestParam("distance") int distance) {
+        Race newRace = new Race();
+        newRace.setName(name);
+        newRace.setDistanceInKM(distance);
+        raceRepository.save(newRace);
+        return "redirect:/races";
     }
 
 }
