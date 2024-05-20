@@ -5,7 +5,9 @@ import com.example.RunningRace.repository.ResultRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/results")
@@ -25,4 +27,12 @@ public class ResultController {
         return result;
     }
 
+    @GetMapping("/getRaceRunners/{id}")
+    public List<Result> getRaceRunners(@PathVariable("id") int raceId) {
+        return resultRepository.findAll()
+                .stream()
+                .filter(result -> result.getRaceId() == raceId)
+                .sorted(Comparator.comparingInt(Result::getTimeInMin))
+                .collect(Collectors.toList());
+    }
 }

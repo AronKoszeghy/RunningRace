@@ -1,5 +1,6 @@
 package com.example.RunningRace.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -47,5 +48,15 @@ public class Result {
 
     public void setTimeInMin(int timeInMin) {
         this.timeInMin = timeInMin;
+    }
+
+    @JsonIgnore
+    public Runner getRunner() {
+        return runner;
+    }
+
+    @JsonIgnore
+    public Race getRace() {
+        return race;
     }
 }
