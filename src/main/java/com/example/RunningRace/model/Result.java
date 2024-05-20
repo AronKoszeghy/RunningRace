@@ -42,6 +42,10 @@ public class Result {
         this.runnerId = runnerId;
     }
 
+    public String getRunnerName() {
+        return this.getRunner().getName();
+    }
+
     public int getTimeInMin() {
         return timeInMin;
     }
@@ -59,4 +63,6 @@ public class Result {
     public Race getRace() {
         return race;
     }
+
+
 }
