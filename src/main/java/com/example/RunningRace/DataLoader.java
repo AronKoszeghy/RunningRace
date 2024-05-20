@@ -29,59 +29,71 @@ public class DataLoader implements CommandLineRunner {
         runner1.setName("Mari");
         runner1.setAge(70);
         runner1.setSex("f");
+        runnerRepository.save(runner1);
 
         Runner runner2 = new Runner();
         runner2.setName("Feri");
         runner2.setAge(65);
         runner2.setSex("m");
+        runnerRepository.save(runner2);
 
         Runner runner3 = new Runner();
         runner3.setName("Hilda");
         runner3.setAge(60);
         runner3.setSex("f");
+        runnerRepository.save(runner3);
 
         Runner runner4 = new Runner();
         runner4.setName("Imre");
         runner4.setAge(55);
         runner4.setSex("m");
+        runnerRepository.save(runner4);
 
         Race race1 = new Race();
         race1.setName("Maraton");
         race1.setDistanceInKM(42);
+        raceRepository.save(race1);
 
         Race race2 = new Race();
         race2.setName("Felmaraton");
         race2.setDistanceInKM(21);
+        raceRepository.save(race2);
 
         Result result1 = new Result();
         result1.setRaceId(1);
         result1.setRunnerId(1);
         result1.setTimeInMin(30);
+        resultRepository.save(result1);
 
         Result result2 = new Result();
         result2.setRaceId(1);
         result2.setRunnerId(2);
         result2.setTimeInMin(35);
+        resultRepository.save(result2);
 
         Result result3 = new Result();
         result3.setRaceId(1);
         result3.setRunnerId(3);
         result3.setTimeInMin(26);
+        resultRepository.save(result3);
 
         Result result4 = new Result();
         result4.setRaceId(2);
         result4.setRunnerId(1);
         result4.setTimeInMin(43);
+        resultRepository.save(result4);
 
         Result result5 = new Result();
         result5.setRaceId(2);
         result5.setRunnerId(2);
         result5.setTimeInMin(30);
+        resultRepository.save(result5);
 
         Result result6 = new Result();
         result6.setRaceId(2);
         result6.setRunnerId(3);
         result6.setTimeInMin(32);
+        resultRepository.save(result6);
     }
 }
 
