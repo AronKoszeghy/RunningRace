@@ -4,13 +4,8 @@ public class Result {
 
     private Race race;
     private Runner runner;
-    private int time;
+    private int timeInMin;
 
-    public Result(Race race, Runner runner, int time) {
-        this.race = race;
-        this.runner = runner;
-        this.time = time;
-    }
 
     public Race getRace() {
         return race;
@@ -20,7 +15,7 @@ public class Result {
         return runner;
     }
 
-    public int getTime() {
-        return time;
+    public int getTimeInMin() {
+        return timeInMin;
     }
 }

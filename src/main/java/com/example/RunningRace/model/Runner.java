@@ -1,21 +1,19 @@
 package com.example.RunningRace.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
 public class Runner {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String name;
     private int age;
     private String sex;
-
-    public Runner(int id, String name, int age, String sex) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.sex = sex;
-    }
 
     public int getId() {
         return id;
@@ -32,4 +30,6 @@ public class Runner {
     public String getSex() {
         return sex;
     }
+
+
 }

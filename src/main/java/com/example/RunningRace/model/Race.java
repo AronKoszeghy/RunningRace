@@ -1,16 +1,19 @@
 package com.example.RunningRace.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Race {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String name;
     private int distanceInKM;
 
-    public Race(int id, String name, int distanceInKM) {
-        this.id = id;
-        this.name = name;
-        this.distanceInKM = distanceInKM;
-    }
 
     public int getId() {
         return id;
