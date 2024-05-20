@@ -26,4 +26,12 @@ public class Race {
     public int getDistanceInKM() {
         return distanceInKM;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDistanceInKM(int distanceInKM) {
+        this.distanceInKM = distanceInKM;
+    }
 }
