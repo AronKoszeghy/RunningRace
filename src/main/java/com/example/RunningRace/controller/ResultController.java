@@ -35,4 +35,14 @@ public class ResultController {
                 .sorted(Comparator.comparingInt(Result::getTimeInMin))
                 .collect(Collectors.toList());
     }
+
+    @GetMapping("/getAverageTime/{id}")
+    public double getAverageTime(@PathVariable("id") int raceId) {
+        return resultRepository.findAll()
+                .stream()
+                .filter(result -> result.getRaceId() == raceId)
+                .mapToInt(result -> result.getTimeInMin())
+                .average()
+                .orElse(-1);
+    }
 }
