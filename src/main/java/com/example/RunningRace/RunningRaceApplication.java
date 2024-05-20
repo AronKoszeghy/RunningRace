@@ -22,46 +22,4 @@ public class RunningRaceApplication {
 		SpringApplication.run(RunningRaceApplication.class, args);
 	}
 
-//	@GetMapping("/getRunners")
-//	public Collection<Runner> getRunners() {
-//		return runners.values();
-//	}
-
-//	@PostMapping("/addRunner")
-//	public void addRunner(@RequestBody Runner runner) {
-//		runners.put(runner.getId(), runner);
-//	}
-
-//	@GetMapping("/getRaceRunners/{raceId}")
-//	public List<Result> getRaceRunners(@PathVariable("raceId") int raceId) {
-//		List<Result> raceResults = new ArrayList<>();
-//		for (Result result : results) {
-//			if (result.getRace().getId() == raceId) {
-//				raceResults.add(result);
-//			}
-//		}
-//		raceResults.sort(Comparator.comparingInt(Result::getTimeInMin));
-//		return raceResults;
-//	}
-//
-//	@PostMapping("/updateRace")
-//	public void updateRace(@RequestBody Race race) {
-//		races.put(race.getId(), race);
-//	}
-//
-//	@PostMapping("/addResult")
-//	public void addResult(@RequestBody Result result) {
-//		results.add(result);
-//	}
-//
-//	@GetMapping("/getAverageTime/{raceId}")
-//	public double getAverageTime(@PathVariable("raceId") int raceId) {
-//		List<Result> raceResults = getRaceRunners(raceId);
-//		int totalTime = 0;
-//		for (Result result : raceResults) {
-//			totalTime += result.getTimeInMin();
-//		}
-//		return (double) totalTime / raceResults.size();
-//	}
-
 }
