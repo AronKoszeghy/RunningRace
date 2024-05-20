@@ -1,0 +1,216 @@
+{
+	"info": {
+		"_postman_id": "9564ca1f-3823-4fae-adf9-06ebe8fb9527",
+		"name": "Futoverseny",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35050512"
+	},
+	"item": [
+		{
+			"name": "getRunners Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/runners/getRunners",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"runners",
+						"getRunners"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addRunner Test",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Misi\",\r\n        \"age\": 65,\r\n        \"sex\": \"m\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/runners/addRunner",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"runners",
+						"addRunner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addRace Test",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"maraton\",\r\n    \"distanceInKM\": 42\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/races/addRace",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"races",
+						"addRace"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateRace Test",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"distanceInKM\": 43\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/races/updateRace",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"races",
+						"updateRace"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addResult Test",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"raceId\": 1,\r\n        \"runnerId\": 2,\r\n        \"timeInMin\": 31\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/results/addResult",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"results",
+						"addResult"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getResults test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/results/getResults",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"results",
+						"getResults"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRaceRunners Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/results/getRaceRunners/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"results",
+						"getRaceRunners",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAverageTime Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/results/getAverageTime/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"results",
+						"getAverageTime",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
